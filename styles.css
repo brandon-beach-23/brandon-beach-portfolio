@@ -162,6 +162,7 @@ h1 {
 .projects .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .slide-show-container {
@@ -171,22 +172,33 @@ h1 {
 }
 
 .project-slide {
-    display: none;
     position: absolute;
     width: 100%;
     height: 475px;
-}
-
-.project-slide.active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items:flex-start;
-    background-image: url("assets/images/personal-finance-tracker-screenshot.png");
+    align-items: flex-start;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
+}
+
+.project-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.project-slide.exit {
+    opacity: 0;
+    transform: translateX(-100%);
+    z-index: 1;
 }
 
 .project-slide.active .project-details {
@@ -194,8 +206,9 @@ h1 {
     background: var(--light-tan);
     flex-direction: column;
     margin: 10px;
+    border-left: 3px solid var(--teal-color);
     border-radius: 8px;
-    padding: 15px 10px;
+    padding: 5px 10px;
 }
 
 .project-slide.active .project-details p {
@@ -205,10 +218,11 @@ h1 {
 .project-slide.active .project-details button {
     cursor: pointer;
     font-size: 0.85rem;
+    border: 2px solid var(--teal-color);
     border-radius: 20px;
     margin-top: 5px;
     padding: 15px 20px;
-    background: var(--teal-color);
+    background: var(--dark-tan);
 }
 
 .project-slide.active .project-details .tech-container {
@@ -235,10 +249,64 @@ h1 {
     min-width: 40px;
     min-height: 40px;
     border-radius: 50%;
-    background: var(--teal-color);
+    background: var(--light-blue);
     cursor: pointer;
+    position: relative;
+    display: inline-block;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 
+.dot.active {
+    background: var(--light-blue);
+    opacity: 1;
+}
+
+.dot.active::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--teal-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.finance-tracker-slide {
+    background-image: url("assets/images/personal-finance-tracker-screenshot.png");
+}
+
+.portfolio-slide {
+    /* TODO: Add ScreenShot of Portfolio */
+    background: white;
+}
+
+/* Skills Section */
+
+.skills .container {
+    display: flex;
+    flex-direction: column;
+    color: var(--light-blue);
+}
+
+.skills .container .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills .container .card h3 {
+    width: 85%;
+    border-bottom: 2px solid var(--light-blue);
+    margin: 5px 15px;
+}
+
+.skills .container .card ul {
+    list-style: square;
+    margin: 5px 25px;
+    padding-left: 5px;
+}
 
 /* Utility Classes */
 .container {
