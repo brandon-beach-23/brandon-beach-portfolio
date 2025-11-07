@@ -35,6 +35,15 @@ body {
     padding-top: 60px;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+
 /* Header */
 
 #my-name {
@@ -195,6 +204,7 @@ body {
     position: relative;
     width: 100%;
     height: 500px;
+    overflow: hidden;
 }
 
 .project-slide {
@@ -664,5 +674,145 @@ body {
     }
 }
 
+@media (min-width: 1025px) {
+
+    .text-lg {
+        font-size: 1.75rem;
+        line-height: 1.4;
+        font-weight: 500;
+        margin: 30px 0 20px;
+    }
+
+    .text-md {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        font-weight: normal;
+        margin: 20px 0 10px;
+    }
+
+    .text-sm {
+        font-size: 1rem;
+    }
+
+   .main-menu ul li a{
+       color: var(--dark-blue);
+   }
+
+    .about .container h2 {
+        color: var(--dark-blue);
+        font-size: 1.75rem;
+    }
+
+    .hero-picture {
+        width: 200px;
+    }
+
+    .about .container p {
+        text-align: center;
+        color: var(--deep-black);
+        margin: 1rem 0.5rem;
+        padding: 0 0.25rem;
+        font-size: 1.2rem;
+    }
+
+    .projects .container h2 {
+        font-size: 1.75rem;
+    }
+
+    .project-slide.active .project-details {
+       margin: 1rem;
+       padding: 0.5rem 0.75rem;
+
+    }
+
+    .project-slide.active .project-details h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .project-slide.active .project-details p {
+        font-size: 1.2rem;
+    }
+
+    .project-slide.active .project-details button {
+        font-size: 1rem;
+    }
+
+    .tech-tag {
+        font-size: 1rem;
+    }
+
+    .finance-tracker-slide {
+        background-image: url("assets/images/personal-finance-tracker-screenshot.png");
+    }
+
+    .portfolio-slide {
+        background-image: url("assets/images/portfolio-site.png");
+    }
+
+    .skills .container {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+    .skills .text-center.text-xl {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.75rem;
+    }
+
+    .skills .card {
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        height: 200px;
+    }
+
+    .development-journey .container h2 {
+        font-size: 1.75rem;
+    }
+
+    .education .container-sm {
+        width: 400px;
+    }
+
+    .education .container-sm h2 {
+        font-size: 1.75rem;
+    }
+
+    .contact .container {
+        width: 800px;
+    }
+
+    .contact .container h2 {
+        font-size: 1.75rem;
+    }
+
+    .connect .container {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+    .connect .text-center.text-xl {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 1.75rem;
+    }
+
+    .connect .card {
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    }
+}
 
 
