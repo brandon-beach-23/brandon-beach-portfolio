@@ -10,9 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger Menu Toggle
     const hamburgerButton = document.querySelector('.hamburger-button');
     const mobileMenu = document.querySelector('.mobile-menu');
+    const menuLinks =mobileMenu.querySelectorAll('a');
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
     hamburgerButton.addEventListener('click', () => {
         hamburgerButton.classList.toggle('active');
         mobileMenu.classList.toggle('active');
+    });
+
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener('click', () => {
+            hamburgerButton.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 200) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    scrollToTopBtn. addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
     //Slide show initialization
     setupButtonClickListeners();
