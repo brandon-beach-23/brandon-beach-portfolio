@@ -1,324 +1,319 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/72a71d2b16.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Brandon Beach | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/72a71d2b16.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Brandon Beach | Portfolio</title>
+  <script src="script.js"></script>
 </head>
 <body>
 
-<!-- Main Header -->
-<header class="header">
-    <div class="container">
-        <div class="header-title">
-            <h1 id="my-name" class="text-lg">Brandon Beach</h1>
-        </div>
-        <nav class="navbar">
-            <div class="main-menu">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#development-journey">Development Journey</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#connect">Connect</a></li>
-                </ul>
-            </div>
 
-            <!-- Hamburger Menu -->
-            <button id="hamburger-button" class="hamburger-button">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </button>
-            <div class="mobile-menu">
-                <ul>
-                    <li><a href="#about" class="text-md">About</a></li>
-                    <li><a href="#projects" class="text-md">Projects</a></li>
-                    <li><a href="#skills" class="text-md">Skills</a></li>
-                    <li><a href="#development-journey" class="text-md">Development Journey</a></li>
-                    <li><a href="#education" class="text-md">Education</a></li>
-                    <li><a href="#contact" class="text-md">Contact</a></li>
-                    <li><a href="#connect" class="text-md">Connect</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<!-- Header -->
+<header class="header bg-main text-main">
+  <div class="container flex-between">
+    <h1 id="my-name" class="text-xl text-accent-dark">Brandon Beach</h1>
+
+    <button class="hamburger-button" aria-label="Toggle menu">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </button>
+
+    <nav class="main-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#development-journey">Journey</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <nav class="mobile-menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#development-journey">Journey</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- Hero Section (About) -->
+<!-- About Section -->
 
 <section id="about" class="about">
-    <div class="container">
-        <div class="hero-heading">
-            <h2  class="text-center text-xl">About Me</h2>
-        </div>
-        <div class="hero-picture">
-            <img src="assets/images/about-photo.jpg" alt="My photo">
-        </div>
-        <div class="hero-content">
-            <p class="text-md">
-                Hi, I’m Brandon Beach, a junior full-stack software developer for building clean, scalable, and secure web applications.
-                I recently completed my Bachelor’s degree for Software Engineering, where I honed my skills in full-stack development using Angular,
-                Spring Boot, and MySQL. I also began exploring cloud deployment using AWS and picked up foundational DevOps practices such as environment
-                variable management and basic debugging.
-            </p>
-            <p class="text-md">
-                My capstone project gave me hands-on experience with deploying a real-world application and helped me understand how
-                different pieces of a tech stack come together. It also sparked my curiosity about scalable architecture and secure authentication — areas
-                I’m excited to keep learning about.
-            </p>
-            <p class="text-md">
-                My approach to development is grounded in curiosity, collaboration, and continuous learning. I enjoy dissecting complex
-                problems and crafting creative, efficient solutions.
-            </p>
-            <p class="text-md">
-                As an avid gamer, I bring a similar mindset to development. Whether I’m leveling up a character or debugging a new feature,
-                I thrive on the process of improvement through iteration, strategy, and persistence. To me, every project feels like a new level to
-                conquer—full of puzzles to solve, skills to sharpen, and the occasional “cheat code” to discover.
-            </p>
-        </div>
+  <div class="container flex-column">
+
+    <h2 class="text-center text-lg text-accent-dark">About Me</h2>
+
+    <div class="about-picture">
+      <img src="assets/images/about-photo.jpg" alt="A portrait of myself">
     </div>
+
+    <p class="text-md text-main">
+      Hi, I’m Brandon Beach, a junior full-stack software developer for building clean, scalable, and secure web applications.
+      I recently completed my Bachelor’s degree for Software Engineering, where I honed my skills in full-stack development using Angular,
+      Spring Boot, and MySQL. I also began exploring cloud deployment using AWS and picked up foundational DevOps practices such as environment
+      variable management and basic debugging.
+    </p>
+    <p class="text-md text-main">
+      My capstone project gave me hands-on experience with deploying a real-world application and helped me understand how
+      different pieces of a tech stack come together. It also sparked my curiosity about scalable architecture and secure authentication — areas
+      I’m excited to keep learning about.
+    </p>
+    <p class="text-md text-main">
+      My approach to development is grounded in curiosity, collaboration, and continuous learning. I enjoy dissecting complex
+      problems and crafting creative, efficient solutions.
+    </p>
+    <p class="text-md text-main">
+      As an avid gamer, I bring a similar mindset to development. Whether I’m leveling up a character or debugging a new feature,
+      I thrive on the process of improvement through iteration, strategy, and persistence. To me, every project feels like a new level to
+      conquer—full of puzzles to solve, skills to sharpen, and the occasional “cheat code” to discover.
+    </p>
+  </div>
 </section>
 
 <!-- Projects Section -->
 
 <section id="projects" class="projects">
-    <div class="container">
-        <h2 class="text-xl text-center">Projects</h2>
-        <div class="slide-show-container">
-            <div class="project-slide finance-tracker-slide">
-                <div class="project-details">
-                    <a href="http://personal-finance-tracker-frontend-193481341844.s3-website.us-east-2.amazonaws.com/login" target="_blank" class="card-link"></a>
-                    <h3 class="text-lg">Personal Finance Tracker</h3>
-                    <p class="text-md">A full-stack web application to allow user to track and manage expenses.</p>
-                    <div class="tech-container">
-                        <span class="tech-tag text-center text-sm">
-                            Java
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            Spring Boot
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            JavaScript
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            TypeScript
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            Angular
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            MySQL
-                        </span>
-                    </div>
-                    <button class="btn text-center">Visit Project</button>
-                </div>
-            </div>
-            <div class="project-slide portfolio-slide">
-                <div class="project-details">
-                    <a href="https://github.com/brandon-beach-23/brandon-beach-portfolio" target="_blank" class="card-link"></a>
-                    <h3 class="text-lg">Portfolio Website</h3>
-                    <p class="text-md">My personal portfolio website to showcase projects.</p>
-                    <div class="tech-container">
-                        <span class="tech-tag text-center text-sm">
-                            HTML
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            CSS
-                        </span>
-                        <span class="tech-tag text-center text-sm">
-                            JavaScript
-                        </span>
-                    </div>
-                    <button class="btn text-center">Visit the Repository</button>
-                </div>
-            </div>
+  <div class="container flex-column">
+    <h2 class="text-center text-lg text-accent-dark">Projects</h2>
+    <div class="slide-show-container">
+      <div class="project-slide flex-column finance-tracker-slide">
+        <div class="project-details flex-column">
+          <a href="http://personal-finance-tracker-frontend-193481341844.s3-website.us-east-2.amazonaws.com/login" target="_blank" class="card-link"></a>
+          <h3 class="text-md text-bold">Personal Finance Tracker</h3>
+          <p class="text-md">A full-stack web application to allow users to track and manage expenses.</p>
+          <div class="tech-container">
+								<span class="tech-tag text-center text-sm">
+									Java
+								</span>
+            <span class="tech-tag text-center text-sm">
+									Spring Boot
+								</span>
+            <span class="tech-tag text-center text-sm">
+									JavaScript
+								</span>
+            <span class="tech-tag text-center text-sm">
+									TypeScript
+								</span>
+            <span class="tech-tag text-center text-sm">
+									Angular
+								</span>
+            <span class="tech-tag text-center text-sm">
+									MySQL
+								</span>
+          </div>
+          <button class="btn text-center">Visit Project</button>
         </div>
-        <div class="dot-container">
-            <button class="dot"></button>
-            <button class="dot"></button>
+      </div>
+      <div class="project-slide flex-column portfolio-site-slide">
+        <div class="project-details flex-column">
+          <a href="https://github.com/brandon-beach-23/brandon-beach-portfolio" target="_blank" class="card-link"></a>
+          <h3 class="text-md text-bold">Portfolio Website</h3>
+          <p class="text-md">My personal portfolio website to showcase projects.</p>
+          <div class="tech-container">
+								<span class="tech-tag text-center text-sm">
+									HTML
+								</span>
+            <span class="tech-tag text-center text-sm">
+									CSS
+								</span>
+            <span class="tech-tag text-center text-sm">
+									JavaScript
+								</span>
+          </div>
+          <button class="btn text-center">Visit Project Repository</button>
         </div>
+      </div>
     </div>
+    <div class="dot-container">
+      <button class="dot"></button>
+      <button class="dot"></button>
+    </div>
+  </div>
 </section>
 
 <!-- Skills Section -->
 <section id="skills" class="skills">
-    <div class="container">
-        <h2 class="text-center text-xl">Skills</h2>
-        <div class="card languages">
-            <h3 class="text-lg">Languages</h3>
-            <ul>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>TypeScript</li>
-            </ul>
-        </div>
-        <div class="card frameworks">
-            <h3 class="text-lg">Frameworks</h3>
-            <ul>
-                <li>Spring Boot</li>
-                <li>Bootstrap CSS</li>
-                <li>Angular</li>
-            </ul>
-        </div>
-        <div class="card databases">
-            <h3 class="text-lg">Databases</h3>
-            <ul>
-                <li>MySQL</li>
-            </ul>
-        </div>
-        <div class="card cloud-deployment">
-            <h3 class="text-lg">Cloud and Deployment</h3>
-            <ul>
-                <li>Amazon Web Services</li>
-                <li>GitHub Actions</li>
-                <li>GitHub Pages</li>
-            </ul>
-        </div>
+  <div class="container">
+    <h2 class="text-center text-lg">Skills</h2>
+    <div class="card">
+      <h3 class="text-md text-bold">Languages</h3>
+      <ul>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+      </ul>
     </div>
+    <div class="card">
+      <h3 class="text-md text-bold">Frameworks</h3>
+      <ul>
+        <li>Spring Boot</li>
+        <li>Angular</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="text-md text-bold">Databases</h3>
+      <ul>
+        <li>MySQL</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="text-md text-bold">Cloud Deployment</h3>
+      <ul>
+        <li>Amazon Web Services</li>
+        <li>GitHub Actions</li>
+        <li>GitHub Pages</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<!-- Experience Section -->
+<!-- Development Journey Section -->
 
 <section id="development-journey" class="development-journey">
-    <div class="container">
-        <h2 class="text-center text-xl">Development Journey</h2>
-        <div class="container">
-            <p class="text-md">
-                My path into software engineering has been shaped by hands-on learning, personal projects, and a drive to build meaningful tools.
-                Coming from a background in financial operations, I've developed a strong foundation in accuracy, data integrity and process
-                analysis - skills that translate directly into thoughtful, reliable software development.
-            </p>
-        </div>
-        <div class="card-container">
-            <div class="card">
-                <h3 class="text-lg"><span class="bullet">Transitioning Through Projects</span></h3>
-                <p class="text-md">
-                    I began my journey by building small tools to solve personal problems, gradually expanding into full-stack applications.
-                    My capstone project, a Personal Finance Tracker, was designed to reflect both my technical growth and my professional background.
-                    It included features like savings goals, transaction tracking, and mock investment insights, built using Java, Spring Boot,
-                    Angular, and MySQL, and deployed on AWS.
-                </p>
-            </div>
-            <div class="card">
-                <h3 class="text-lg"><span class="bullet">Building Muscle Memory</span></h3>
-                <p class="text-md">
-                    To deepen my understanding of web development, I created a responsive portfolio site from scratch using HTML, CSS, and JavaScript.
-                    This project helped me solidify layout techniques, animation principles, and DOM manipulation, while reinforcing version control
-                    practices with Git
-                </p>
-            </div>
-            <div class="card">
-                <h3 class="text-lg"><span class="bullet">Exploring New Ideas</h3>
-                <p class="text-md">
-                    I’ve also explored mobile development through an Android Vacation Planner app, and I’m planning a custom mind map and note-taking
-                    tool to support my learning. These projects reflect my curiosity and commitment to continuous improvement.
-                </p>
-            </div>
-            <div class="card">
-                <h3 class="text-lg"><span class="bullet">Transferable Skills from Finance</h3>
-                <p class="text-md">
-                    In my current role as a Vault Reconciliation Analyst, I’ve honed skills in:
-                </p>
-                <ul>
-                    <li class="text-sm">Data validation</li>
-                    <li class="text-sm">Process optimization</li>
-                    <li class="text-sm">Attention to detail under pressure</li>
-                    <li class="text-sm">Cross-functional communication</li>
-                </ul>
-            </div>
-        </div>
-        <p class="text-md">
-            These experiences have shaped how I approach software — with precision, clarity, and a focus on solving real-world problems.
-        </p>
+  <div class="container">
+    <h2 class="text-center text-lg">Development Journey</h2>
+    <p class="text-md">
+      My path into software engineering has been shaped by hands-on learning, personal projects, and a drive to build meaningful tools.
+      Coming from a background in financial operations, I've developed a strong foundation in accuracy, data integrity and process
+      analysis - skills that translate directly into thoughtful, reliable software development.
+    </p>
+    <div class="card-container">
+    <div class="card">
+      <h3 class="text-lg"><span class="bullet">Transitioning Through Projects</span></h3>
+      <p class="text-md">
+        I began my journey by building small tools to solve personal problems, gradually expanding into full-stack applications.
+        My capstone project, a Personal Finance Tracker, was designed to reflect both my technical growth and my professional background.
+        It included features like savings goals, transaction tracking, and mock investment insights, built using Java, Spring Boot,
+        Angular, and MySQL, and deployed on AWS.
+      </p>
     </div>
+      <div class="card">
+        <h3 class="text-lg"><span class="bullet">Building Muscle Memory</span></h3>
+        <p class="text-md">
+          To deepen my understanding of web development, I created a responsive portfolio site from scratch using HTML, CSS, and JavaScript.
+          This project helped me solidify layout techniques, animation principles, and DOM manipulation, while reinforcing version control
+          practices with Git.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="text-lg"><span class="bullet">Exploring New Ideas</span></h3>
+        <p class="text-md">
+          I’ve also explored mobile development through an Android Vacation Planner app, and I’m planning a custom mind map and note-taking
+          tool to support my learning. These projects reflect my curiosity and commitment to continuous improvement.
+        </p>
+      </div>
+      <div class="card">
+        <h3 class="text-lg"><span class="bullet">Transferable Skills from Finance</span></h3>
+        <p class="text-md">
+          In my current role as a Vault Reconciliation Analyst, I’ve honed skills in:
+        </p>
+        <ul>
+          <li class="text-sm">Data validation</li>
+          <li class="text-sm">Process optimization</li>
+          <li class="text-sm">Attention to detail under pressure</li>
+          <li class="text-sm">Cross-functional communication</li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-md">
+      These experiences have shaped how I approach software — with precision, clarity, and a focus on solving real-world problems.
+    </p>
+  </div>
+
 </section>
 
-<!-- Education Section -->
+<!-- Education -->
 
 <section id="education" class="education">
-    <div class="container-sm">
-        <h2 class="text-center text-xl">Education</h2>
-        <div class="card">
-            <h3 class="text-lg"><strong>Western Governor's University</strong></h3>
-            <p class="text-md"><strong>BA, Software Engineering</strong> - 2025</p>
-        </div>
+  <div class="container-sm">
+    <h2 class="text-center text-lg">Education</h2>
+    <div class="card">
+      <h3 class="text-md text-bold">Western Governor's University</h3>
+      <p class="text-md">BA, Software Engineering - 2025</p>
     </div>
+  </div>
 </section>
 
 <!-- Contact Form -->
 
 <section id="contact" class="contact">
-    <div class="container">
-        <h2 class="text-xl text-center">Contact</h2>
-        <p class="text-md">
-            I'm always open to connecting with innovative teams and contributing to impactful projects. If you believe I could be a valuable addition to your
-            organization, I'd love to hear from you.
-        </p>
+  <div class="container">
+    <h2 class="text-lg text-center">Contact</h2>
+    <p class="text-md">
+      I'm always open to connecting with innovative teams and contributing to impactful projects. If you believe I could be a valuable addition to your
+      organization, I'd love to hear from you.
+    </p>
 
-        <form class="contact-form">
-            <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+    <form class="contact-form mt-md">
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
 
-            <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="text" id="email" name="email" required>
-            </div>
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="text" id="email" name="email" required>
+      </div>
 
-            <div class="form-group">
-                <label for="company">Company *</label>
-                <input type="text" id="company" name="company" required>
-            </div>
+      <div class="form-group">
+        <label for="company">Company *</label>
+        <input type="text" id="company" name="company" required>
+      </div>
 
-            <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" placeholder="Feel free to share details about the role, your team, company culture, and what qualities you're looking for in a candidate..." required></textarea>
-            </div>
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" placeholder="Feel free to share details about the role, your team, company culture, and what qualities you're looking for in a candidate..." required></textarea>
+      </div>
 
-            <input class="btn" type="submit" value="Send Message">
-        </form>
+      <input class="btn" type="submit" value="Send Message">
+    </form>
 
-    </div>
+  </div>
 </section>
 
 <!-- Connect Section -->
 
 <section id="connect" class="connect">
-    <div class="container">
-        <h2 class="text-center text-xl">Let's Connect</h2>
-        <div class="card">
-            <a href="https://github.com/brandon-beach-23" target="_blank" class="card-link"></a>
-            <h3 class="text-md"><i class="fa-brands fa-github fa-lg social-icon"></i><strong>GitHub</strong></h3>
-            <p class="text-sm">brandon-beach-23</p>
-        </div>
-        <div class="card">
-            <a href="https://www.linkedin.com/in/brandon-beach-745b2875/" class="card-link" target="_blank"></a>
-            <h3 class="text-md"><i class="fa-brands fa-linkedin fa-lg social-icon"></i><strong>LinkedIn</strong></h3>
-            <p class="text-sm">Connect on LinkedIn</p>
-        </div>
+  <div class="container">
+    <h2 class="text-center text-xl">Let's Connect</h2>
+    <div class="card">
+      <a href="https://github.com/brandon-beach-23" target="_blank" class="card-link"></a>
+      <h3 class="text-md"><i class="fa-brands fa-github fa-lg social-icon"></i><strong>GitHub</strong></h3>
+      <p class="text-sm">brandon-beach-23</p>
     </div>
+    <div class="card">
+      <a href="https://www.linkedin.com/in/brandon-beach-745b2875/" class="card-link" target="_blank"></a>
+      <h3 class="text-md"><i class="fa-brands fa-linkedin fa-lg social-icon"></i><strong>LinkedIn</strong></h3>
+      <p class="text-sm">Connect on LinkedIn</p>
+    </div>
+  </div>
 </section>
 
 
 <footer class="footer">
-    <p>&copy; 2025 Brandon Beach</p>
+  <p>&copy; 2025 Brandon Beach</p>
 </footer>
 
 <!-- FAB -->
 
 <button id="scrollToTopBtn" class="fab" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
-
 <script src="script.js"></script>
 </body>
 </html>
