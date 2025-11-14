@@ -10,16 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger Menu Toggle
     const hamburgerButton = document.querySelector('.hamburger-button');
     const mobileMenu = document.querySelector('.mobile-menu');
-    const menuLinks =mobileMenu.querySelectorAll('a');
+    const mobileMenuLinks =mobileMenu.querySelectorAll('a');
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    const mainMenu = document.querySelector('.main-menu');
+    const mainMenuLinks = mainMenu.querySelectorAll('a');
+    const sections = document.querySelectorAll('section')
 
     hamburgerButton.addEventListener('click', () => {
         hamburgerButton.classList.toggle('active');
         mobileMenu.classList.toggle('active');
     });
 
-    menuLinks.forEach(menuLink => {
-        menuLink.addEventListener('click', () => {
+    mobileMenuLinks.forEach(mobileMenuLink => {
+        mobileMenuLink.addEventListener('click', () => {
             hamburgerButton.classList.remove('active');
             mobileMenu.classList.remove('active');
         });
@@ -39,6 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                mainMenuLinks.forEach(mainMenuLink => mainMenuLink.classList.remove('active'));
+                const activeLink = document.querySelector(`.main-menu a[href="#${entry.target.id}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, { threshold: 0.6 });
+
+    sections.forEach(section => observer.observe(section));
+
     //Slide show initialization
     setupButtonClickListeners();
     showSlide(currentSlideIndex);
@@ -68,7 +86,7 @@ function showSlide(index) {
         nextSlide.classList.add('active');
         buttons[index].classList.add('active');
         currentSlideIndex = index;
-    }, 500);
+    }, 800);
 }
 
 function setupButtonClickListeners () {
@@ -85,7 +103,7 @@ function startAutoSlide() {
     slideInterval = setInterval(() => {
         let nextIndex = currentSlideIndex + 1;
         showSlide(nextIndex);
-    }, 5000);
+    }, 8000);
 }
 
 function stopAutoSlide() {

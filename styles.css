@@ -1,6 +1,6 @@
 :root {
 
-    /* Color Pallete */
+    /* Color Pallet */
     --color-bg-main: #F1EFEC;
     --color-accent-light: #D4C9BE;
     --color-accent-dark: #123458;
@@ -30,6 +30,8 @@ html {
     background-color: var(--color-bg-main);
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 a {
@@ -89,7 +91,7 @@ h2 {
     align-items: center;
 }
 
-/* Spcaing Utilities */
+/* Spacing Utilities */
 .mt-sm { margin-top: var(--spacing-sm); }
 .mt-md { margin-top: var(--spacing-md); }
 .mt-lg { margin-top: var(--spacing-lg); }
@@ -432,17 +434,19 @@ h2 {
 
 /* Education */
 
-.education .container-sm {
+.education .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: var(--spacing-sm);
 }
 
-.education .container-sm .card {
+.education .container .card {
     background-color: var(--color-accent-dark);
     border-left: 3px solid var(--color-accent-light);
     border-radius: 10px;
     color: var(--color-accent-light);
+    height: 100px;
 }
 
 .contact .container {
@@ -473,7 +477,7 @@ h2 {
 }
 
 .form-group label {
-    margin-bottom: 0.25rem;
+    margin: 0.25rem 0;
     font-weight: bold;
 }
 
@@ -489,6 +493,7 @@ h2 {
 
 .contact-form .btn {
     background-color: var(--color-accent-light);
+    margin-bottom: 1rem;
 }
 
 /* Connect Section */
@@ -533,6 +538,8 @@ h2 {
     padding: var(--spacing-md);
     border-top: 1px solid var(--color-accent-light);
     background-color: var(--color-accent-dark);
+    width: 100%;
+
 }
 
 /* Floating Action Button */
@@ -555,5 +562,142 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
+/* Tablet Media Query */
 
+@media (min-width: 768px){
+    main {
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+        max-width: 850px;
+    }
 
+    .container {
+        margin: 0 var(--spacing-md);
+        padding: 0 var(--spacing-md);
+    }
+
+    .project-slide.active .project-details {
+        max-width: 300px;
+    }
+
+    .skills .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    .skills .container h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .education .container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .education .container h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .education .container .card {
+        width: 300px;
+    }
+
+    .contact .container p {
+        width: 575px;
+        margin: 0 auto;
+    }
+
+    .contact-form {
+        width: 616px;
+        margin: 1rem auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    .connect .container {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .connect .container h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .connect .container .card {
+        width: 300px;
+    }
+}
+
+/* Desktop Media Query */
+
+@media (min-width: 1024px) {
+    #my-name {
+        padding-top: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .about h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .hamburger-button {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .main-menu {
+        display: block;
+        margin-top: 35px;
+    }
+
+    .main-menu ul {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .main-menu ul li a {
+        display: inline-block;
+        color: var(--color-accent-dark);
+        font-size: var(font-size-lg);
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        margin: 0 var(--spacing-sm);
+    }
+
+    .main-menu ul li a:hover {
+        transform: scale(1.2);
+    }
+
+    .main-menu ul li a.active {
+        border-radius: 2px;
+        border-bottom: 3px solid var(--color-accent-dark);
+    }
+
+    .development-journey .container ul li {
+        font-size: var(--font-size-md);
+    }
+
+    .finance-tracker-slide {
+        background-image: url("assets/images/personal-finance-tracker-screenshot.png");
+    }
+
+    .portfolio-site-slide {
+        background-image: url("assets/images/portfolio-site.png");
+    }
+}
