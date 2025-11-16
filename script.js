@@ -109,3 +109,29 @@ function startAutoSlide() {
 function stopAutoSlide() {
     clearInterval(slideInterval);
 }
+
+const form = document.querySelector(".contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function(event) {
+    event.preventDefault(); // stop normal form submission
+
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            status.textContent = "✅ Thanks, " + data.get("name") + "! Your message has been sent.";
+            form.reset(); // clear the form
+        } else {
+            status.textContent = "❌ Oops! Something went wrong. Please try again.";
+        }
+    } catch (error) {
+        status.textContent = "❌ Network error. Please check your connection.";
+    }
+});

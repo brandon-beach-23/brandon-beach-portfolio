@@ -562,6 +562,17 @@ h2 {
     transition: opacity 0.3s ease;
 }
 
+/* Form Status */
+
+#form-status {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: green; /* success */
+}
+#form-status.error {
+    color: red; /* error */
+}
+
 /* Tablet Media Query */
 
 @media (min-width: 768px){
