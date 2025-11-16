@@ -647,6 +647,14 @@ h2 {
     .connect .container .card {
         width: 300px;
     }
+
+    .finance-tracker-slide {
+        background-image: url("assets/images/personal-finance-tracker-screenshot.png");
+    }
+
+    .portfolio-site-slide {
+        background-image: url("assets/images/portfolio-site.png");
+    }
 }
 
 /* Desktop Media Query */
