@@ -307,6 +307,10 @@ h2 {
     background-image: url("assets/images/mobile-portfolio-site.png");
 }
 
+.habit-tracker-slide {
+    background-image: url("assets/images/mobile-habit-tracker.png");
+}
+
 .dot-container {
     display: flex;
     justify-content: center;
@@ -654,6 +658,10 @@ h2 {
 
     .portfolio-site-slide {
         background-image: url("assets/images/portfolio-site.png");
+    }
+
+    .habit-tracker-slide {
+        background-image: url("assets/images/habit-tracker.png");
     }
 }
 

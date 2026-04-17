@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    
+    <header class="header bg-main text-main">
+        <div class="container flex-between">
+            <h1 class="text-xl text-accent-dark">Habit Tracker</h1>
+        </div>
+    </header>    
+
+    <main>
+        <!-- Overview -->
+        <section class="container-sm">
+            <h2 class="text-lg">Overview</h2>
+            <p class="text-md">
+                A local Spring Boot application designed to track daily habits and 
+                dynamically calculate streaks using event-based completion data.
+            </p>
+        </section>    
+        
+        <!-- Motivation -->
+
+        <section class="container-sm">
+            <h2 class="text-lg">Problem & Motivation</h2>
+            <p class="text-md">
+                I wanted a lightweight habit trackere that runs locally, persists data
+                reliably, and avoids derived-state bugs by calculating streaks dynamically.
+            </p>
+        </section>
+
+        <!-- Features -->
+        <section class="container-sm bg-accent-light card">
+            <h2 class="text-lg">Key Features</h2>
+            <ul class="text-md">
+                <li>CRUD management of habits</li>
+                <li>Daily completion tracking</li>
+                <li>Dynamically calculated streaks</li>
+                <li>SQLite Persistence</li>
+                <li>Service and controller unit testing</li>
+            </ul>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="container-sm bg-accent-light card">
+            <h2 class="text-lg">Tech Stack</h2>
+            <div class="tech-container">
+                <span class="tech-tag">Java 17</span>
+                <span class="tech-tag">Spring Boot</span>
+                <span class="tech-tag">Spring Data JPA</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Thymeleaf</span>
+                <span class="tech-tag">JUnit / Mockito</span>
+            </div>
+        </section>
+
+         <!-- Lessons -->
+        <section class="container-sm">
+            <h2 class="text-lg">What I learned</h2>
+            <ul class="text-md">
+                <li>Designing event-based domain models</li>
+                <li>Dynamic streak calculations</li>
+                <li>Layered testing strategies</li>
+                <li>Packaging Spring Boot apps as standalone JARs</li>
+            </ul>
+        </section>
+
+          <!-- Links -->
+        <section class="container-sm text-center">
+            <a href="https://github.com/brandon-beach-23/habit-tracker" target="_blank" class="btn">
+                View Github Repository
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy 2026 Brandon Beach</p>
+    </footer>
+    
+</body>
+</html>
